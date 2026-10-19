@@ -10,7 +10,7 @@ T = 0.5;       % Time to maturity
 Smax = 3 * K;  % Outer boundary placed at 3 times strike
 
 % Grid setups for Table 1 (10x10, 20x20, 40x40)
-N_values = [10, 20, 40]; 
+N_values = [10, 20, 40, 80, 160, 320, 640]; 
 
 % Storage for errors to calculate reduction factor (c_inf)
 errors_U = zeros(length(N_values), 1);
