@@ -13,11 +13,15 @@ European call, K = 15, sigma = 0.3, r = 0.05, rd = 0.03, T = 0.5, Smax = 3K. Sec
 | `Table1_CrankNicolson.m` | CN solver and error table |
 
 ## Results: paper vs mine
-| Grid | u (paper / mine) | Delta (paper / mine) | Gamma (paper / mine) |
-|---|---|---|---|
-| 10x10 | 1.3e-1 / 9.0e-2 | 9.7e-2 / 5.3e-2 | 2.1e-2 / 1.1e-2 |
-| 20x20 | 3.3e-2 / 1.5e-2 | 9.6e-3 / 2.3e-2 | 6.2e-3 / 6.2e-3 |
-| 40x40 | 6.4e-3 / 4.9e-3 | 1.7e-3 / 6.4e-3 | 1.9e-3 / 1.8e-3 |
+| N | u error | ratio | Delta error | ratio | Gamma error | ratio |
+|---|---|---|---|---|---|---|
+| 10 | 9.0e-2 | - | 5.3e-2 | - | 1.1e-2 | - |
+| 20 | 1.5e-2 | 5.8 | 2.3e-2 | 2.3 | 6.2e-3 | 1.8 |
+| 40 | 4.9e-3 | 3.2 | 6.4e-3 | 3.6 | 1.8e-3 | 3.5 |
+| 80 | 1.1e-3 | 4.4 | 1.7e-3 | 3.8 | 4.6e-4 | 3.8 |
+| 160 | 2.9e-4 | 3.8 | 4.1e-4 | 4.1 | 1.1e-4 | 4.1 |
+| 320 | 7.1e-5 | 4.1 | 1.0e-4 | 4.0 | 2.9e-5 | 3.9 |
+| 640 | 1.8e-5 | 3.9 | 2.6e-5 | 4.0 | 7.1e-6 | 4.0 |
 
 ## Convergence on finer grids (my MATLAB run)
 [paste the extended table with N = 80...640 and the error ratios here]
