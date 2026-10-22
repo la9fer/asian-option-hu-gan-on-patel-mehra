@@ -1,5 +1,7 @@
 # Stage 04: Time stepping (in progress)
 
+# Part 1: HONC Table 1 baseline
+
 **Question:** Can I reproduce Table 1 (second-order block) of Oosterlee, Leentvaar & Huang, "Accurate American Option Pricing by Grid Stretching and High Order Finite Differences"?
 
 **Period:** ~28 Jul 2026 (file modified date at the time; reconstructed)
@@ -69,5 +71,4 @@ Notes: the paper's first-step order in Table 4 (2.4547) is not consistent with i
 The solver is correct: error ratios per doubling approach 4 (second order) for u, Delta and Gamma. The paper's Table 1 numbers are NOT reproduced: only Gamma at 20x20 and 40x40 agree. Varying Smax (25-90) and the grid-size convention did not close the gap, and changing the number of time steps has no effect on the errors, so the discrepancy is spatial and probably due to a setup detail the paper does not state. Not resolved.
 
 ## Open items
-- [ ] Add the BDF4 files (from the cn, bdf4 folder) to this stage
 - [x] BDF4 files added (Hu & Gan Tables 4-5, above)
