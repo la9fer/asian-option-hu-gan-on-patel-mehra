@@ -34,5 +34,5 @@ European call, K = 15, sigma = 0.3, r = 0.05, rd = 0.03, T = 0.5, Smax = 3K. Sec
 The solver is correct: error ratios per doubling approach 4 (second order) for u, Delta and Gamma. The paper's Table 1 numbers are NOT reproduced: only Gamma at 20x20 and 40x40 agree. Varying Smax (25-90) and the grid-size convention did not close the gap, and changing the number of time steps has no effect on the errors, so the discrepancy is spatial and probably due to a setup detail the paper does not state. Not resolved.
 
 ## Open items
-- [ ] Add the BDF4 files (from the `cn, bdf4` folder) to this stage
-- [ ] Reproduce the paper's fourth-order block of Table 1
+- [ ] Add the BDF4 files (from the cn, bdf4 folder) to this stage
+- [x] BDF4 files added (Hu & Gan Tables 4-5, above)
