@@ -32,6 +32,9 @@ European call, K = 15, sigma = 0.3, r = 0.05, rd = 0.03, T = 0.5, Smax = 3K. Sec
 | 320 | 7.1e-5 | 4.1 | 1.0e-4 | 4.0 | 2.9e-5 | 3.9 |
 | 640 | 1.8e-5 | 3.9 | 2.6e-5 | 4.0 | 7.1e-6 | 4.0 |
 
+## Status
+The solver is correct: error ratios per doubling approach 4 (second order) for u, Delta and Gamma. The paper's Table 1 numbers are NOT reproduced: only Gamma at 20x20 and 40x40 agree. Varying Smax (25-90) and the grid-size convention did not close the gap, and changing the number of time steps has no effect on the errors, so the discrepancy is spatial and probably due to a setup detail the paper does not state. Not resolved.
+
 ## Part 2: Hu & Gan (2018), Tables 4-5 (CN vs BDF4, unstretched grids)
 
 **Paper:** Hu & Gan, "High order method for Black-Scholes PDE" (see references.md).
@@ -67,8 +70,7 @@ Notes: the paper's first-step order in Table 4 (2.4547) is not consistent with i
 
 **Status:** reproduced. Errors match the paper's printed values. On unstretched grids the observed order stays near 2 for both CN and BDF4, so BDF4 gives no gain here because of the non-smooth payoff. This motivates stage 05.
 
-## Status
-The solver is correct: error ratios per doubling approach 4 (second order) for u, Delta and Gamma. The paper's Table 1 numbers are NOT reproduced: only Gamma at 20x20 and 40x40 agree. Varying Smax (25-90) and the grid-size convention did not close the gap, and changing the number of time steps has no effect on the errors, so the discrepancy is spatial and probably due to a setup detail the paper does not state. Not resolved.
-
 ## Open items
 - [x] BDF4 files added (Hu & Gan Tables 4-5, above)
+- [ ] Reproduce the paper's fourth-order block of HONC Table 1
+- [ ] Find the source of the gap in HONC Table 1 (second-order block)
