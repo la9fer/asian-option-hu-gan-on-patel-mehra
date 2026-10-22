@@ -6,7 +6,7 @@
 | Stage | Approx. period | Evidence | Status |
 |---|---|---|---|
 | 02 Finite differences (Cen & Le 2011) | ~17-19 Jun 2026 | .m files modified 17 and 19 Jun 2026 | Reproduced (errors within ~2% of the paper) |
-| 04 Time stepping: Hu & Gan Tables 4-5 | ~11 Aug 2026 | table4.m, table5.m modified 11 Aug 2026 | Reproduced (errors match printed values) |
+| 04 Time stepping: HONC Table 1 baseline (CN) and Hu & Gan Tables 4-5 | ~28 Jul - 11 Aug 2026 | Table1_CrankNicolson.m modified 28 Jul 2026; table4.m, table5.m modified 11 Aug 2026 | HONC baseline: solver verified, paper's numbers not reproduced. Hu & Gan Tables 4-5: reproduced |
 | 05 Grid stretching: Hu & Gan Tables 6-7 | ~9 Aug - 8 Sep 2026 | table6.m modified 9 Aug, table7.m 8 Sep 2026 | Partly: both tables match at 20 and 40, differ at 80 |
 
 ## Entries (newest first)
