@@ -116,7 +116,7 @@ for idx = 1:length(grids)
         order_str = '-';
         central_prev = err_val;
     else
-        order = log2(central_prev / err_val);
+        order = log(central_prev / err_val) / log(N / grids(idx-1));
         order_str = sprintf('%.4f', order);
         central_prev = err_val;
     end
@@ -222,7 +222,7 @@ for idx = 1:length(grids)
         order_str = '-';
         compact_prev = err_val;
     else
-        order = log2(compact_prev / err_val);
+        order = log(compact_prev / err_val) / log(N / grids(idx-1));
         order_str = sprintf('%.4f', order);
         compact_prev = err_val;
     end
