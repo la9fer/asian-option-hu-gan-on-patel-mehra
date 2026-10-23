@@ -44,8 +44,9 @@ Order = log(e_prev/e_cur) / log(N_cur/N_prev), relative to the previous row of m
 Times are single runs on my machine, in seconds (the first includes MATLAB start-up), and are not used for any comparison.
 
 ## Status
-Tables 6 and 7 match the paper at 20x20 and 40x40 for both schemes. At 80x80 they differ: Table 6 central 5.57e-5 vs 6.01e-5 and compact 2.13e-4 vs 1.53e-4; Table 7 central 6.91e-5 vs 9.37e-5 and compact 1.49e-5 vs 3.49e-5. The two compact gaps are exactly 6.0e-5 and 2.0e-5 with otherwise identical digits, so I suspect a one-digit slip somewhere, but I have not determined whether it is in the paper or in my work. With stretching, the central scheme converges at about fourth order on every grid I ran (orders 3.9-4.2); the compact scheme is more erratic between 40 and 80 (3.5-6.8) and otherwise about 3.7-4.3.
+Tables 6 and 7 match the paper at 20x20 and 40x40 for both schemes. At 80x80 they differ: Table 6 central 5.57e-5 vs 6.01e-5 and compact 2.13e-4 vs 1.53e-4; Table 7 central 6.91e-5 vs 9.37e-5 and compact 1.49e-5 vs 3.49e-5. 
+
+I checked an independent re-implementation of table7.m in Python (written with an AI assistant, not included in this repo): it reproduces my MATLAB output exactly. At N = 80, changing the number of time steps (M = 20 to 640) or the stretching parameters (xi = 6-20, Smax = 45-100) does not reproduce the paper's values, so the discrepancy is not caused by those. The paper's 80x80 row may have used a different setup or contain an error; not resolved. With stretching, the central scheme converges at about fourth order on every grid I ran (orders 3.9-4.2); the compact scheme is erratic between 40 and 80 (3.5-6.8) and otherwise about 3.7-4.3.
 
 ## Open items
-- [ ] Check the printed 80x80 values in the paper's Tables 6 and 7 against my transcription
-- [ ] Find why the 80x80 rows differ
+- [ ] Explain the 80x80 rows of the paper's Tables 6 and 7 (not caused by time steps, xi or Smax)
