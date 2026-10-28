@@ -29,7 +29,7 @@ Applying the Hu & Gan (2018) methodology (fourth-order compact finite difference
 | 04 | Time stepping (Hu & Gan Tables 4-5, BDF3/BDF4) |
 | 05 | Grid stretching (Hu & Gan Tables 6-7) |
 | 06 | Asian PDE and Rogers-Shi reduction |
-| 07 | Final solver and new results |
+| 07 | Final solver and new results (novel) |
 
 ## Running the code
 
